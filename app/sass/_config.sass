@@ -1,8 +1,9 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
+$accent: #44B6FF // Accent Color
 $fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$textcolor: #3F3D56 // Text Color
+$titlecolor: #242424 //Title Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 $roboto: Roboto, sans-serif // Roboto Font Family
 
@@ -27,10 +28,10 @@ $gutter: $grid-gutter-width
 		// font-display: swap // Uncomment to initially display system fonts
 		src: local($fname), url($furl) format('woff2')
 
+@include font('Roboto', normal, 300, '../fonts/roboto-light.woff2')
 @include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2')
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('Roboto', normal, 500, '../fonts/roboto-medium.woff2')
 @include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
 
 // GENERAL DOCUMENT STYLES
 
@@ -56,3 +57,43 @@ body
 	line-height: 1.65
 	overflow-x: hidden
 	color: $textcolor
+
+.container
+	width: 80%
+	margin: 0 auto
+
+.container-fluid
+	width: 100%
+	height: 100%
+
+.btn
+	background-color: #fff
+	border: 1px solid #FF6584
+	padding: 10px 25px
+	border-radius: 5px
+	color: #FF6584
+	transition: all .3s ease
+	&:hover
+		border: 1px solid $accent
+		color: $accent
+		box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08)
+
+.btn2
+	background-color: $accent
+	border: 1px solid $accent
+	padding: 10px 45px
+	border-radius: 5px
+	color: #fff
+	margin-left: 20px
+	transition: all .3s ease
+	&:hover
+		background-color: #FF6584
+		border: 1px solid #FF6584
+		color: #fff
+		box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08)
+
+.title
+	font-size: 29px
+	font-weight: 500
+	text-align: center
+	padding-bottom: 20px
